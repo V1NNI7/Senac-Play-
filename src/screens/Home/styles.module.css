@@ -20,6 +20,10 @@
 
 }
 
+.loginButton:hover {
+    background-color: #8b0000;
+}
+
 .loginButton a {
     text-decoration: none;
     color: white;
@@ -51,9 +55,3 @@
     font-size: 1.5rem;
 }
 
-/* Segunda seção da página */ 
-
-.secondPage {
-    color: white;
-    background-color: black;
-}

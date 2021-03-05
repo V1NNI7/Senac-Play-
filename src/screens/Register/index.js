@@ -10,13 +10,15 @@ const Register = () => {
         initialValues: {
             name: '',
             email: '',
+            user: '',
+            password: '',
         },
         validationSchema: Yup.object({
             name: Yup.string().required(' Obrigatório'),
             email: Yup.string().email(' E-mail inválido').required(' Obrigatório'),
             user: Yup.string().required(' Obrigatório'),
             password: Yup.string().matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-                "Sua senha deve conter 8 ou mais caracteres, sendo uma letra maiúscula, uma letra minúscula, um número e um caracter especial!").required(' Obrigatório'),
+                "Senha fraca").required(' Obrigatório'),
         }),
 
         onSubmit: (values) => {
@@ -77,7 +79,7 @@ const Register = () => {
                                 id="password"
                                 name="password"
                                 type="password"
-                                placeholder="Insira sua senha"
+                                placeholder="Sua senha deve conter 8 caracteres sendo eles números, letra maiúscula, minúscula e 1 caracter especial"
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                                 value={formik.values.password}
@@ -85,7 +87,7 @@ const Register = () => {
                             {formik.touched.password && formik.errors.user ? <label htmlFor="password">{formik.errors.password}</label> : null}
                         </div>
                     </div>
-                    <button className={classes.button} type="submit"><Link to="/login" /*component={ Login }*/ >Enviar</Link></button>
+                    <button className={classes.button} type="submit"><Link to="/login">Enviar</Link></button>
                 </form>
             </div>
         </>
