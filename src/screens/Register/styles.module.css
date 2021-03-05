@@ -7,7 +7,7 @@
   
   body {
     margin: 0;
-    background-color: black;
+    background-image: url(../../img/admission-2974645_1920.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +74,6 @@
   }
   
   .button[type=submit] {
-    width: 10%;
     background-color: #800000;
     color: white;
     padding: 12px 20px;
@@ -88,6 +87,7 @@
   .button a {
     text-decoration: none;
     color: white;
+    text-align: left;
   }
 
   .button[type=submit]:hover {

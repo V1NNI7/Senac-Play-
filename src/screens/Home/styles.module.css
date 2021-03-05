@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+.imgLogo {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 18px;
+    background-image: url(../../img/exampleImg.jpg);
+}
+
+.loginButton {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 18px;
+    background-color: #800000;
+    border-radius: 4px;
+    border: none;
+    padding: 8px 15px;
+
+}
+
+.loginButton a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+.registerButton {
+    text-align: center;
+    display: inline-flex;
+    background-color: #800000;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+}
+
+.registerButton a {
+    color: white;
+    text-transform: uppercase!important;
+    text-decoration: none;
+}
+
+.registerButton:hover {
+    background-color: #8b0000;
+}
+
+.initialSection {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Segunda seção da página */ 
+
+.secondPage {
+    color: white;
+    background-color: black;
+}

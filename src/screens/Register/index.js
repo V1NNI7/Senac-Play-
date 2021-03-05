@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import GlobalMenu from '../../components/GlobalMenu'
 import * as Yup from 'yup';
 import classes from './styles.module.css';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const formik = useFormik({
@@ -84,7 +85,7 @@ const Register = () => {
                             {formik.touched.password && formik.errors.user ? <label htmlFor="password">{formik.errors.password}</label> : null}
                         </div>
                     </div>
-                    <button className={classes.button} type="submit"><a href="#">Enviar</a></button>
+                    <button className={classes.button} type="submit"><Link to="/login" /*component={ Login }*/ >Enviar</Link></button>
                 </form>
             </div>
         </>
