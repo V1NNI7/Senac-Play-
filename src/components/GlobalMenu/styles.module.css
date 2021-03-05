@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.navBar {
+    
+}
+
+.navBar :link {
+    text-decoration: none;
+    color: white;
+}
