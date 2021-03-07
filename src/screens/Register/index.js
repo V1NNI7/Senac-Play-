@@ -15,10 +15,10 @@ const Register = () => {
         },
         validationSchema: Yup.object({
             name: Yup.string().required(' Obrigatório'),
-            email: Yup.string().email(' E-mail inválido').required(' Obrigatório'),
+            email: Yup.string().email(' E-mail inválido').required('Obrigatório'),
             user: Yup.string().required(' Obrigatório'),
             password: Yup.string().matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-                "Senha fraca").required(' Obrigatório'),
+                "Senha Fraca").required(' Obrigatório'),
         }),
 
         onSubmit: (values) => {
@@ -30,8 +30,12 @@ const Register = () => {
         <>
             <GlobalMenu />
 
+            <nav className={classes.leftArrow}>
+            <Link to="/" className={classes.backButton}><i class="fas fa-arrow-circle-left fa-3x"></i></Link>
+            </nav>
+
             <div className={classes.page}>
-                <h1 className={classes.title}>Cadrasto de Clientes</h1>
+                <h1 className={classes.title}>Cadrasto</h1>
                 <form onSubmit={formik.handleSubmit}>
                     <div className={classes.registerPage}>
                         <div className={classes.name}>
@@ -45,7 +49,7 @@ const Register = () => {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.name}
                             />
-                            {formik.touched.name && formik.errors.name ? <label htmlFor="name">{formik.errors.name}</label> : null}
+                            {formik.touched.name && formik.errors.name ? <label htmlFor="name" className={classes.error}>{formik.errors.name}</label> : null}
                         </div>
                         <div className={classes.email}>
                             <label htmlFor="email">E-mail: </label>
@@ -58,7 +62,7 @@ const Register = () => {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.email}
                             />
-                            {formik.touched.email && formik.errors.email ? <label htmlFor="email">{formik.errors.email}</label> : null}
+                            {formik.touched.email && formik.errors.email ? <label htmlFor="email" className={classes.error}>{formik.errors.email}</label> : null}
                         </div>
                         <div className={classes.user}>
                             <label htmlFor="user">Usuário: </label>
@@ -71,7 +75,7 @@ const Register = () => {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.user}
                             />
-                            {formik.touched.user && formik.errors.user ? <label htmlFor="user">{formik.errors.user}</label> : null}
+                            {formik.touched.user && formik.errors.user ? <label htmlFor="user" className={classes.error}>{formik.errors.user}</label> : null}
                         </div>
                         <div className={classes.password}>
                             <label htmlFor="password">Senha: </label>
@@ -84,14 +88,15 @@ const Register = () => {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.password}
                             />
-                            {formik.touched.password && formik.errors.user ? <label htmlFor="password">{formik.errors.password}</label> : null}
+                            {formik.touched.password && formik.errors.password ? <label htmlFor="password" className={classes.error}>{formik.errors.password}</label> : null}
                         </div>
                     </div>
-                    <button className={classes.button} type="submit"><Link to="/login">Enviar</Link></button>
+                    <button className={classes.button} type="submit" name="submit" id="submit">Enviar</button>
                 </form>
             </div>
         </>
     );
 };
+
 
 export default Register;

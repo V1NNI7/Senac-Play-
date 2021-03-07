@@ -15,18 +15,23 @@
   }
 
   .page {
-    background-color: grey;
+    background-color:	#222222;
     width: 50vw;
     margin: auto;
     padding: 15px;
+    border-radius: 20px;
+    border: #800000;
+    border-style: solid;
+    
+  }
+
+  label {
+    color: white;
   }
 
   .title {
     text-align: center;
-  }
-
-  .registerPage {
-  background-color: grey;
+    color: rgba(255, 255, 255, 0.39);
   }
 
   .name [type=text], select {
@@ -93,7 +98,22 @@
   .button[type=submit]:hover {
     background-color: #8b0000;
   }
-  
+
+  .error {
+    color: #dc3545;
+  }
+
+  .leftArrow .backButton {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: #8b0000;
+    border: solid white;
+    background-color: white;
+    border-radius: 50%;
+    
+  }
+
   /*div {
     border-radius: 5px;
     background-color: #f2f2f2;
