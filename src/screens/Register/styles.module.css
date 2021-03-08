@@ -1,11 +1,21 @@
   @charset "utf-8";
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
   
   * {
     font-family: 'Open Sans';
     box-sizing: border-box;
   }
   
-  body {
+  /*body {
+    margin: 0;
+    background-image: url(../../img/admission-2974645_1920.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }*/
+
+  .totalPage {
     margin: 0;
     background-image: url(../../img/admission-2974645_1920.jpg);
     display: flex;
@@ -20,7 +30,7 @@
     margin: auto;
     padding: 15px;
     border-radius: 20px;
-    border: #800000;
+    border: #7600a9;
     border-style: solid;
     
   }
@@ -79,7 +89,7 @@
   }
   
   .button[type=submit] {
-    background-color: #800000;
+    background-color: #7600a9;
     color: white;
     padding: 12px 20px;
     margin: 8px 0;
@@ -96,7 +106,7 @@
   }
 
   .button[type=submit]:hover {
-    background-color: #8b0000;
+    background-color: #8f00cc;
   }
 
   .error {
@@ -107,15 +117,10 @@
     position: absolute;
     top: 50px;
     left: 50px;
-    color: #8b0000;
-    border: solid white;
-    background-color: white;
+    color: #7600a9;
+    border: solid #f7eeee;
+    background-color: #f7eeee;
     border-radius: 50%;
     
   }
 
-  /*div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }*/

@@ -28,71 +28,72 @@ const Register = () => {
 
     return (
         <>
-            <GlobalMenu />
+
 
             <nav className={classes.leftArrow}>
-            <Link to="/" className={classes.backButton}><i class="fas fa-arrow-circle-left fa-3x"></i></Link>
+                <Link to="/" className={classes.backButton}><i class="fas fa-arrow-circle-left fa-3x"></i></Link>
             </nav>
-
-            <div className={classes.page}>
-                <h1 className={classes.title}>Cadrasto</h1>
-                <form onSubmit={formik.handleSubmit}>
-                    <div className={classes.registerPage}>
-                        <div className={classes.name}>
-                            <label htmlFor="name">Nome: </label>
-                            <input
-                                id="name"
-                                name="name"
-                                type="text"
-                                placeholder="Seu nome"
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                value={formik.values.name}
-                            />
-                            {formik.touched.name && formik.errors.name ? <label htmlFor="name" className={classes.error}>{formik.errors.name}</label> : null}
+            <div className={classes.totalPage}>
+                <div className={classes.page}>
+                    <h1 className={classes.title}>Cadrasto</h1>
+                    <form onSubmit={formik.handleSubmit}>
+                        <div className={classes.registerPage}>
+                            <div className={classes.name}>
+                                <label htmlFor="name">Nome completo: </label>
+                                <input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    placeholder="Seu nome"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.name}
+                                />
+                                {formik.touched.name && formik.errors.name ? <label htmlFor="name" className={classes.error}>{formik.errors.name}</label> : null}
+                            </div>
+                            <div className={classes.email}>
+                                <label htmlFor="email">E-mail: </label>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="text"
+                                    placeholder="Email"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.email}
+                                />
+                                {formik.touched.email && formik.errors.email ? <label htmlFor="email" className={classes.error}>{formik.errors.email}</label> : null}
+                            </div>
+                            <div className={classes.user}>
+                                <label htmlFor="user">Usuário: </label>
+                                <input
+                                    id="user"
+                                    name="user"
+                                    type="text"
+                                    placeholder="Usuário"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.user}
+                                />
+                                {formik.touched.user && formik.errors.user ? <label htmlFor="user" className={classes.error}>{formik.errors.user}</label> : null}
+                            </div>
+                            <div className={classes.password}>
+                                <label htmlFor="password">Senha: </label>
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    placeholder="Sua senha deve conter 8 caracteres sendo eles números, letra maiúscula, minúscula e 1 caracter especial"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.password}
+                                />
+                                {formik.touched.password && formik.errors.password ? <label htmlFor="password" className={classes.error}>{formik.errors.password}</label> : null}
+                            </div>
                         </div>
-                        <div className={classes.email}>
-                            <label htmlFor="email">E-mail: </label>
-                            <input
-                                id="email"
-                                name="email"
-                                type="text"
-                                placeholder="Email"
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                value={formik.values.email}
-                            />
-                            {formik.touched.email && formik.errors.email ? <label htmlFor="email" className={classes.error}>{formik.errors.email}</label> : null}
-                        </div>
-                        <div className={classes.user}>
-                            <label htmlFor="user">Usuário: </label>
-                            <input
-                                id="user"
-                                name="user"
-                                type="text"
-                                placeholder="Usuário"
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                value={formik.values.user}
-                            />
-                            {formik.touched.user && formik.errors.user ? <label htmlFor="user" className={classes.error}>{formik.errors.user}</label> : null}
-                        </div>
-                        <div className={classes.password}>
-                            <label htmlFor="password">Senha: </label>
-                            <input
-                                id="password"
-                                name="password"
-                                type="password"
-                                placeholder="Sua senha deve conter 8 caracteres sendo eles números, letra maiúscula, minúscula e 1 caracter especial"
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                value={formik.values.password}
-                            />
-                            {formik.touched.password && formik.errors.password ? <label htmlFor="password" className={classes.error}>{formik.errors.password}</label> : null}
-                        </div>
-                    </div>
-                    <button className={classes.button} type="submit" name="submit" id="submit">Enviar</button>
-                </form>
+                        <button className={classes.button} type="submit" name="submit" id="submit">Enviar</button>
+                    </form>
+                </div>
             </div>
         </>
     );

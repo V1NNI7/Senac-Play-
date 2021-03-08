@@ -1,11 +1,19 @@
 @charset "utf-8";
 
+
+.principalPage {
+    margin: 0;
+    background-image: url(../../img/admission-2974645_1920.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .imgLogo {
     position: absolute;
     top: 50px;
     left: 50px;
-    font-size: 18px;
-    background-image: url(../../img/exampleImg.jpg);
 }
 
 .loginButton {
@@ -13,40 +21,39 @@
     top: 50px;
     right: 50px;
     font-size: 18px;
-    background-color: #800000;
+    background-color: #8f00cc;
     border-radius: 4px;
     border: none;
     padding: 8px 15px;
+    color: white;
 
 }
 
 .loginButton:hover {
-    background-color: #8b0000;
+    background-color: #7600a9;
 }
 
-.loginButton a {
-    text-decoration: none;
-    color: white;
-    
-}
 
 .registerButton {
     text-align: center;
     display: inline-flex;
-    background-color: #800000;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
+    background-color: #8f00cc;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase!important;
 }
 
-.registerButton a {
-    color: white;
-    text-transform: uppercase!important;
+a {
     text-decoration: none;
 }
 
 .registerButton:hover {
-    background-color: #8b0000;
+    background-color: #7600a9;
 }
 
 .initialSection {
@@ -55,3 +62,23 @@
     font-size: 1.5rem;
 }
 
+hr {
+    opacity: 100%;
+}
+
+.secondSection, .thirdSection, .fourSection {
+    padding: 15%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+
+.informationSection {
+    padding: 10%;
+    background-color: #272727;
+}
+
+
+
+    
